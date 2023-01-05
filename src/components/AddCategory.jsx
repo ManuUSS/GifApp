@@ -7,15 +7,20 @@ export const AddCategory = () => {
   const handleInputChange = ( { target} ) => {
     const { value } = target;
     setInputValue( value )
+  }
 
+  const handleSubmit = ( event ) => {
+    event.preventDefault();
   }
 
   return (
-    <input
-      type="text"
-      placeholder="Buscar gifs..."
-      value={inputValue}
-      onChange={ handleInputChange }
-    />
+    <form onSubmit={ (e) => handleSubmit}>
+      <input
+        type="text"
+        placeholder="Buscar gifs..."
+        value={inputValue}
+        onChange={ handleInputChange }
+      />
+    </form>
   )
 }
