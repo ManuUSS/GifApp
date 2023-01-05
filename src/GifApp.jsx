@@ -15,8 +15,7 @@ export const GifApp = () => {
   return (
     <>
         <h1>Gif App</h1>
-        <AddCategory />
-        <button onClick={ handleAddCategorie } >Agregar</button>
+        <AddCategory setCategories={ setCategories }/>
         <ol>
             { categories.map( category => {
                 return <li key={ category }>{ category }</li>
