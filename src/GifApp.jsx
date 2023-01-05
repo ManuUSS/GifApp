@@ -7,6 +7,7 @@ export const GifApp = () => {
     const handleAddCategorie = ( value ) => {
         //Forma 1
         //setCategories([ ...categories, 'Valorant' ]);
+        if( categories.includes( value ) ) return;
         //Al réves
         setCategories([ value, ...categories ]);
         //Forma 2
